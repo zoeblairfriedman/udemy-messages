@@ -1,11 +1,8 @@
 import { MessagesRepository } from "./messages.repository";
 
 export class MessagesService {
-  messagesRepo: MessagesRepository;
-
-  constructor() {
-    // THIS IS A PLACEHOLDER!!! WE WILL USE INJECTION FOR DEPENDENCIES SOON
-    this.messagesRepo = new MessagesRepository()
+  constructor(public messagesRepo: MessagesRepository) {
+   
   }
 
   findOne(id: string) {
